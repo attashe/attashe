@@ -69,28 +69,12 @@
             animation: gradient-shift 3s ease-in-out infinite;
         }
 
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
         .hero-subtitle {
             font-size: 1.3rem;
             color: #b8c5d1;
             margin-bottom: 30px;
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.5s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Navigation */
@@ -327,8 +311,8 @@
 
     <header>
         <div class="container">
-            <h1 class="hero-title">Your Name</h1>
-            <p class="hero-subtitle">Computer Graphics • AI Engineer • Game Developer</p>
+            <h1 class="hero-title">Vladislav Mikhailov</h1>
+            <p class="hero-subtitle">Computer Graphics • AI Engineer</p>
             <nav>
                 <a href="#projects" class="nav-btn">Projects</a>
                 <a href="#about" class="nav-btn">About</a>
@@ -342,76 +326,68 @@
             <div class="projects-grid">
                 <!-- Point Cloud Rendering Project -->
                 <div class="project-card">
-                    <div class="project-icon">🌐</div>
+                    <!-- <div class="project-icon">🌐</div> -->
                     <h3 class="project-title">Massive Point Cloud Renderer</h3>
                     <div class="video-container">
-                        <span><video src="videos/StablePointsShowcaseOpt1.mov"></video></span>
+                        <video controls>
+                            <source src="videos/StablePointsShowcaseOpt1.mov" type="video/mov">
+                        Your browser does not support the video tag.
+                        </video>
                     </div>
                     <p class="project-description">
-                        High-performance point cloud rendering system capable of handling massive datasets with real-time visualization. 
-                        Implements advanced LOD techniques and GPU acceleration for smooth interaction with millions of points.
+                        High-performance point cloud rendering system for changing camera angle and perspective.
+                        Pipeline for changing camera angle and inpainting includes Stable Diffusion, Depth estimation, Upscale and Frame interpolation models. 
+                        Implements GPU acceleration for smooth interaction with millions of point.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">WebGL</span>
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">GLSL</span>
+                        <span class="tech-tag">Pytorch</span>
+                        <span class="tech-tag">myDearPyGUI</span>
+                        <span class="tech-tag">StableDiffusion</span>
                         <span class="tech-tag">Performance Optimization</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">View on GitHub</a>
-                        <a href="#" class="project-link secondary">Live Demo</a>
+                        <a href="https://github.com/attashe/stable_points" class="project-link">View on GitHub</a>
                     </div>
                 </div>
 
                 <!-- BabylonJS Industrial Visualization -->
                 <div class="project-card">
-                    <div class="project-icon">🏭</div>
+                    <!-- <div class="project-icon">🏭</div> -->
                     <h3 class="project-title">Industrial Visualization Platform</h3>
                     <p class="project-description">
-                        Interactive 3D visualization platform for industrial environments using BabylonJS. 
+                        Interactive 3D visualization platform for pipe inspection using BabylonJS. 
                         Features real-time data integration, interactive controls, and immersive visualization 
-                        of complex industrial processes and equipment.
+                        of detected profiles.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">BabylonJS</span>
-                        <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">3D Graphics</span>
-                        <span class="tech-tag">Real-time Data</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Project</a>
-                        <a href="#" class="project-link secondary">Case Study</a>
+                        <span class="tech-tag">Contour Detection</span>
                     </div>
                 </div>
 
                 <!-- Generative AI Experience -->
                 <div class="project-card">
-                    <div class="project-icon">🎨</div>
+                    <!-- <div class="project-icon">🎨</div> -->
                     <h3 class="project-title">Sketch-to-Image AI System</h3>
                     <p class="project-description">
                         Developed advanced sketch-to-image generation pipeline with focus on inference optimization. 
-                        Implemented custom model architectures and optimization techniques that reduced inference time by 60% 
-                        while maintaining high-quality output.
+                        Integrated into existing application inferencing on the AWS SageMaker platform.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">Model Optimization</span>
+                        <span class="tech-tag">AWS</span>
                         <span class="tech-tag">Generative AI</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Technical Details</a>
                     </div>
                 </div>
 
                 <!-- Game Jam Project -->
                 <div class="project-card">
-                    <div class="project-icon">🎮</div>
+                    <!-- <div class="project-icon">🎮</div> -->
                     <h3 class="project-title">GameJam Creation</h3>
                     <p class="project-description">
-                        Innovative game developed during a 48-hour game jam. Features unique mechanics, 
-                        polished gameplay, and creative problem-solving under tight time constraints. 
-                        Showcases rapid prototyping and game design skills.
+                        Game developed using AI during a 48-hour game jam. Focusing on the AI generated assests.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Unity</span>
@@ -420,20 +396,20 @@
                         <span class="tech-tag">Rapid Prototyping</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Play on itch.io</a>
-                        <a href="#" class="project-link secondary">Development Log</a>
+                        <a href="https://attashe.itch.io/protogenev2" class="project-link">Play on itch.io</a>
                     </div>
                 </div>
 
                 <!-- ComfyUI Extension -->
                 <div class="project-card">
-                    <div class="project-icon">⚡</div>
+                    <!-- <div class="project-icon">⚡</div> -->
                     <h3 class="project-title">ComfyUI Flux Extension</h3>
                     <p class="project-description">
                         Custom ComfyUI extension implementing regional prompting capabilities for Flux models. 
                         Enables precise control over different regions of generated images, expanding creative possibilities 
                         for AI artists and developers.
                     </p>
+                     <img src="imgs/comfy_screenshot.png" alt="A custom node interface"> 
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">ComfyUI</span>
@@ -441,8 +417,7 @@
                         <span class="tech-tag">Regional Prompting</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">GitHub Repository</a>
-                        <a href="#" class="project-link secondary">Documentation</a>
+                        <a href="https://github.com/attashe/ComfyUI-FluxRegionAttention" class="project-link">GitHub Repository</a>
                     </div>
                 </div>
             </div>
@@ -452,11 +427,9 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link">📧</a>
-                <a href="#" class="social-link">💼</a>
-                <a href="#" class="social-link">🐙</a>
+                <a href="https://www.linkedin.com/in/vladislav-mikhailov-091a78191/" class="social-link">LinkedIn</a>
             </div>
-            <p>&copy; 2025 Your Name. Built with passion for technology and innovation.</p>
+            <p>&copy; 2025 Attashe. Built with passion for technology and innovation.</p>
         </div>
     </footer>
 
